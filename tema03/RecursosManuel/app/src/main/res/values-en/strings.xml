@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RecursosManuel</string>
+    <string name="continuar">Continue</string>
+    <string name="cancelar">Cancel</string>
+</resources>
