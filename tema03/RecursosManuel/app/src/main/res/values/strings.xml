@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecursosManuel</string>
+    <string name="nombre_completo" translatable="false">Manuel Mas Bautista</string>
+</resources>
