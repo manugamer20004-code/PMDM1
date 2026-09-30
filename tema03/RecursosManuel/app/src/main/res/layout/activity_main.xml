@@ -22,22 +22,22 @@
 
     <Button
         android:id="@+id/botonContinuar"
+        style="@style/BotonTarea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/continuar"
-        app:backgroundTint="@color/verde"
-        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/verde"
         app:layout_constraintTop_toBottomOf="@id/textoNombre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/botonCancelar"
+        style="@style/BotonTarea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cancelar"
-        app:backgroundTint="@color/rojo"
-        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/rojo"
         app:layout_constraintTop_toBottomOf="@id/botonContinuar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

@@ -1,7 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.RecursosManuel" parent="Theme.Material3.DayNight.NoActionBar">
-        <string name="app_name">RecursosManuel</string>
+    </style>
+
+    <style name="Theme.RecursosManuel" parent="Base.Theme.RecursosManuel" />
+    <!-- Estilo común de los botones -->
+    <style name="BotonTarea">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>
