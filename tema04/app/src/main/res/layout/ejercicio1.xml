@@ -30,14 +30,14 @@
         android:orientation="vertical">
 
         <View android:layout_width="match_parent" android:layout_height="0dp"
-            android:layout_weight="1" android:background="@color/gris1" />
+            android:layout_weight="1" android:background="@color/franja4" />
         <View android:layout_width="match_parent" android:layout_height="0dp"
-            android:layout_weight="1" android:background="@color/gris2" />
+            android:layout_weight="1" android:background="@color/franja5" />
         <View android:layout_width="match_parent" android:layout_height="0dp"
-            android:layout_weight="1" android:background="@color/gris1" />
+            android:layout_weight="1" android:background="@color/franja4" />
         <View android:layout_width="match_parent" android:layout_height="0dp"
-            android:layout_weight="1" android:background="@color/gris2" />
+            android:layout_weight="1" android:background="@color/franja5" />
         <View android:layout_width="match_parent" android:layout_height="0dp"
-            android:layout_weight="1" android:background="@color/gris1" />
+            android:layout_weight="1" android:background="@color/franja4" />
     </LinearLayout>
 </LinearLayout>
