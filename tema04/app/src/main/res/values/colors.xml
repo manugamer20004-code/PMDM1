@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="franja1">#E53935</color>
+    <color name="franja2">#FDD835</color>
+    <color name="franja3">#43A047</color>
+    <color name="gris1">#1E88E5</color>
+    <color name="gris2">#8E24AA</color>
 </resources>
