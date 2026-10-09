@@ -7,4 +7,13 @@
     <color name="franja3">#43A047</color>
     <color name="gris1">#1E88E5</color>
     <color name="gris2">#8E24AA</color>
+    <color name="cuadro1">#E53935</color>
+    <color name="cuadro2">#FB8C00</color>
+    <color name="cuadro3">#FDD835</color>
+    <color name="cuadro4">#43A047</color>
+    <color name="cuadro5">#00ACC1</color>
+    <color name="cuadro6">#1E88E5</color>
+    <color name="cuadro7">#5E35B1</color>
+    <color name="cuadro8">#D81B60</color>
+    <color name="cuadro9">#6D4C41</color>
 </resources>
