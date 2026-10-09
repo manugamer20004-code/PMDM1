@@ -5,5 +5,14 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="BotonCalc" parent="Widget.Material3.Button">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="backgroundTint">@color/boton_calc</item>
+        <item name="android:textColor">@color/texto_boton_calc</item>
+    </style>
+
     <style name="Theme.Layouts" parent="Base.Theme.Layouts" />
 </resources>

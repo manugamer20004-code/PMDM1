@@ -16,4 +16,8 @@
     <color name="cuadro7">#5E35B1</color>
     <color name="cuadro8">#D81B60</color>
     <color name="cuadro9">#6D4C41</color>
+    <color name="fondo_calc">#424242</color>
+    <color name="pantalla_calc">#9E9E9E</color>
+    <color name="boton_calc">#000000</color>
+    <color name="texto_boton_calc">#FFFFFF</color>
 </resources>
