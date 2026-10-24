@@ -6,4 +6,7 @@
     <string name="hint_contrasena">Escribe tu contraseña</string>
     <string name="recordar">Recordar contraseña</string>
     <string name="continuar">Continuar</string>
+    <string name="msg_correcto">Usuario y contraseña correctos</string>
+    <string name="msg_correcto_recordar">Usuario y contraseña correctos. Almacenados para siguientes accesos</string>
+    <string name="msg_incorrecto">Usuario y/o contraseña incorrectos</string>
 </resources>
