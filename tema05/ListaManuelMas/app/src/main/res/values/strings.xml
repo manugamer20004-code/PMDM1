@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ListaManuel</string>
     <string name="imagen_elemento">Imagen del elemento</string>
+    <string name="cabecera">Lista de videojuegos</string>"
 </resources>
