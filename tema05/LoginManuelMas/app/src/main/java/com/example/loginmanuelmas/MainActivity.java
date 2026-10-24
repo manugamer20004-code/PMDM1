@@ -16,7 +16,7 @@ import com.google.android.material.materialswitch.MaterialSwitch;
 public class MainActivity extends AppCompatActivity {
 
     // Usuario válido
-    private static final String CORREO_VALIDO = "manuel@correo.com";
+    private static final String CORREO_VALIDO = "manuel35@gmail.com";
     private static final String PASS_VALIDA = "1234";
 
     @Override
@@ -42,6 +42,26 @@ public class MainActivity extends AppCompatActivity {
             String correo = etCorreo.getText().toString();
             String pass = etContrasena.getText().toString();
 
+            // 1.4: si hay algún campo vacío, se avisa y no se comprueba nada más
+            boolean hayVacios = false;
+            if (correo.isEmpty()) {
+                etCorreo.setError(getString(R.string.error_correo));
+                etCorreo.requestFocus();      // para que se vea el globo con el mensaje
+                hayVacios = true;
+            }
+            if (pass.isEmpty()) {
+                etContrasena.setError(getString(R.string.error_contrasena));
+                if (!correo.isEmpty()) {
+                    etContrasena.requestFocus();   // solo si el correo sí está escrito
+                }
+                hayVacios = true;
+            }
+            if (hayVacios) {
+                tvMensaje.setText("");
+                return;
+            }
+
+            // 1.2 y 1.3: comprobación del usuario
             if (correo.equals(CORREO_VALIDO) && pass.equals(PASS_VALIDA)) {
                 // Datos correctos: mensaje en verde
                 tvMensaje.setTextColor(getColor(R.color.verde_ok));
