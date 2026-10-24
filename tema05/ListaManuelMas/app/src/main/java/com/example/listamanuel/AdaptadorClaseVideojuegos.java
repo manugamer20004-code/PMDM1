@@ -7,6 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -48,7 +49,7 @@ public class AdaptadorClaseVideojuegos
         Videojuegos videojuego = videojuegos.get(position);
         holder.tvTitulo.setText(videojuego.getTitulo());
         holder.tvSubtitulo.setText(videojuego.getPlataforma());
-        holder.ivImagen.setImageResource(videojuego.getImagen());
+        holder.ivImagen.setImageDrawable(AppCompatResources.getDrawable(holder.itemView.getContext(), videojuego.getImagen()));
     }
 
     @Override
