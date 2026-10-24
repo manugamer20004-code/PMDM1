@@ -22,4 +22,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-C:\Users\masma\Documents\GitHub\PMDM1\tema05\ListaManuelMas
