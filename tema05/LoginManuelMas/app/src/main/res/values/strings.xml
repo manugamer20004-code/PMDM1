@@ -11,4 +11,5 @@
     <string name="msg_incorrecto">Usuario y/o contraseña incorrectos</string>
     <string name="error_correo">Escribe tu correo</string>
     <string name="error_contrasena">Escribe la contraseña</string>
+    <string name="msg_demasiados">Demasiados intentos</string>
 </resources>

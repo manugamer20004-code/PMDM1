@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,8 +17,11 @@ import com.google.android.material.materialswitch.MaterialSwitch;
 public class MainActivity extends AppCompatActivity {
 
     // Usuario válido
-    private static final String CORREO_VALIDO = "manuel35@gmail.com";
+    private static final String CORREO_VALIDO = "manuel@correo.com";
     private static final String PASS_VALIDA = "1234";
+
+    // Extra: contador de intentos fallidos
+    private int intentosFallidos = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
             boolean hayVacios = false;
             if (correo.isEmpty()) {
                 etCorreo.setError(getString(R.string.error_correo));
-                etCorreo.requestFocus();      // para que se vea el globo con el mensaje
+                etCorreo.requestFocus();
                 hayVacios = true;
             }
             if (pass.isEmpty()) {
                 etContrasena.setError(getString(R.string.error_contrasena));
                 if (!correo.isEmpty()) {
-                    etContrasena.requestFocus();   // solo si el correo sí está escrito
+                    etContrasena.requestFocus();
                 }
                 hayVacios = true;
             }
@@ -63,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
             // 1.2 y 1.3: comprobación del usuario
             if (correo.equals(CORREO_VALIDO) && pass.equals(PASS_VALIDA)) {
+                intentosFallidos = 0;   // Extra: si aciertas, vuelve a 0
                 // Datos correctos: mensaje en verde
                 tvMensaje.setTextColor(getColor(R.color.verde_ok));
                 if (swRecordar.isChecked()) {
@@ -71,9 +76,16 @@ public class MainActivity extends AppCompatActivity {
                     tvMensaje.setText(R.string.msg_correcto);
                 }
             } else {
-                // Algún dato falla: mensaje en rojo
+                intentosFallidos++;   // Extra: cada fallo suma uno
                 tvMensaje.setTextColor(getColor(R.color.rojo_error));
-                tvMensaje.setText(R.string.msg_incorrecto);
+                if (intentosFallidos >= 3) {
+                    // Al tercer fallo: botón desactivado, mensaje y Toast
+                    btnContinuar.setEnabled(false);
+                    tvMensaje.setText(R.string.msg_demasiados);
+                    Toast.makeText(this, R.string.msg_demasiados, Toast.LENGTH_SHORT).show();
+                } else {
+                    tvMensaje.setText(R.string.msg_incorrecto);
+                }
             }
         });
     }
