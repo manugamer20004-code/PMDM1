@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LoginManuelMas</string>
+    <string name="correo_etiqueta">Correo electrónico</string>
+    <string name="contrasena_etiqueta">Contraseña</string>
+    <string name="hint_correo">Escribe tu correo</string>
+    <string name="hint_contrasena">Escribe tu contraseña</string>
+    <string name="recordar">Recordar contraseña</string>
+    <string name="continuar">Continuar</string>
 </resources>
