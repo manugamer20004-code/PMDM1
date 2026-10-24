@@ -12,6 +12,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
 public class AdaptadorClaseVideojuegos
         extends RecyclerView.Adapter<AdaptadorClaseVideojuegos.ViewHolder> {
 
@@ -49,7 +61,13 @@ public class AdaptadorClaseVideojuegos
         Videojuegos videojuego = videojuegos.get(position);
         holder.tvTitulo.setText(videojuego.getTitulo());
         holder.tvSubtitulo.setText(videojuego.getPlataforma());
-        holder.ivImagen.setImageDrawable(AppCompatResources.getDrawable(holder.itemView.getContext(), videojuego.getImagen()));
+        holder.ivImagen.setImageResource(videojuego.getImagen());
+
+        // Al tocar la fila, un Toast con su título
+        holder.itemView.setOnClickListener(v ->
+                Toast.makeText(v.getContext(),
+                        videojuego.getTitulo(),
+                        Toast.LENGTH_SHORT).show());
     }
 
     @Override
