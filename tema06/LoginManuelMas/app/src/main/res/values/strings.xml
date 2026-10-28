@@ -12,4 +12,7 @@
     <string name="error_correo">Escribe tu correo</string>
     <string name="error_contrasena">Escribe la contraseña</string>
     <string name="msg_demasiados">Demasiados intentos</string>
+    <string name="titulo_menu">Menú principal</string>
+    <string name="saludo">Hola, Manuel Mas</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
 </resources>
