@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     // Usuario válido
     private static final String CORREO_VALIDO = "manuel@correo.com";
     private static final String PASS_VALIDA = "1234";
+    public static final String EXTRA_SESION_CERRADA = "sesion_cerrada";
 
     // Extra: contador de intentos fallidos
     private int intentosFallidos = 0;
@@ -41,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         MaterialSwitch swRecordar = findViewById(R.id.swRecordar);
         Button btnContinuar = findViewById(R.id.btnContinuar);
         TextView tvMensaje = findViewById(R.id.tvMensaje);
+        // Si venimos de «Cerrar sesión», se muestra el aviso en verde
+        if (getIntent().getBooleanExtra(EXTRA_SESION_CERRADA, false)) {
+            tvMensaje.setTextColor(getColor(R.color.verde_ok));
+            tvMensaje.setText(R.string.sesion_cerrada);
+        }
 
         // Al pulsar Continuar
         btnContinuar.setOnClickListener(v -> {

@@ -15,4 +15,5 @@
     <string name="titulo_menu">Menú principal</string>
     <string name="saludo">Hola, Manuel Mas</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="sesion_cerrada">Se ha cerrado sesión correctamente</string>
 </resources>

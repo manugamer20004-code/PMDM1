@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.content.Intent;
+import android.widget.Button;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -35,5 +37,14 @@ public class MenuActivity extends AppCompatActivity {
         String correo = getIntent().getStringExtra(EXTRA_CORREO);
         TextView tvSaludo = findViewById(R.id.tvSaludo);
         tvSaludo.setText(getString(R.string.saludo) + " " + correo);
+
+        // Botón Cerrar sesión: abre un login nuevo y cierra el menú
+        Button btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
+        btnCerrarSesion.setOnClickListener(v -> {
+            Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+            intent.putExtra(MainActivity.EXTRA_SESION_CERRADA, true); // avisa al login
+            startActivity(intent);
+            finish();
+        });
     }
 }
