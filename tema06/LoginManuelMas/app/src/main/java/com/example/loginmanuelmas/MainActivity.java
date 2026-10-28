@@ -1,5 +1,7 @@
 package com.example.loginmanuelmas;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import android.content.Intent;
 
 import com.google.android.material.materialswitch.MaterialSwitch;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String CORREO_VALIDO = "manuel@correo.com";
     private static final String PASS_VALIDA = "1234";
     public static final String EXTRA_SESION_CERRADA = "sesion_cerrada";
+    private SharedPreferences prefs; // fichero «sesion», donde se guarda el correo
 
     // Extra: contador de intentos fallidos
     private int intentosFallidos = 0;
@@ -42,10 +44,20 @@ public class MainActivity extends AppCompatActivity {
         MaterialSwitch swRecordar = findViewById(R.id.swRecordar);
         Button btnContinuar = findViewById(R.id.btnContinuar);
         TextView tvMensaje = findViewById(R.id.tvMensaje);
+
         // Si venimos de «Cerrar sesión», se muestra el aviso en verde
         if (getIntent().getBooleanExtra(EXTRA_SESION_CERRADA, false)) {
             tvMensaje.setTextColor(getColor(R.color.verde_ok));
             tvMensaje.setText(R.string.sesion_cerrada);
+        }
+
+        // Abre las preferencias y lee el correo guardado ("" si no hay nada)
+        prefs = getSharedPreferences("sesion", MODE_PRIVATE);
+        String guardado = prefs.getString("correo", "");
+        if (!guardado.isEmpty()) {
+            etCorreo.setText(guardado);       // escribe el correo en su caja
+            swRecordar.setChecked(true);      // deja el interruptor activado
+            etContrasena.requestFocus();      // el cursor se va a la contraseña
         }
 
         // Al pulsar Continuar
@@ -73,9 +85,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             // 1.2 y 1.3: comprobación del usuario
-            // Comprobación del usuario
             if (correo.equals(CORREO_VALIDO) && pass.equals(PASS_VALIDA)) {
                 intentosFallidos = 0;
+
+                // Recordar correo: se guarda o se borra según el interruptor
+                if (swRecordar.isChecked()) {
+                    prefs.edit().putString("correo", correo).apply();
+                } else {
+                    prefs.edit().remove("correo").apply();
+                }
 
                 // Datos correctos: se abre el menú y se le pasa el correo
                 Intent intent = new Intent(MainActivity.this, MenuActivity.class);

@@ -4,7 +4,7 @@
     <string name="contrasena_etiqueta">Contraseña</string>
     <string name="hint_correo">Escribe tu correo</string>
     <string name="hint_contrasena">Escribe tu contraseña</string>
-    <string name="recordar">Recordar contraseña</string>
+    <string name="recordar">Recordar correo</string>
     <string name="continuar">Continuar</string>
     <string name="msg_correcto">Usuario y contraseña correctos</string>
     <string name="msg_correcto_recordar">Usuario y contraseña correctos. Almacenados para siguientes accesos</string>
