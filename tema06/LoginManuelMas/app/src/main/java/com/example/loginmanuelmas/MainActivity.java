@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.content.Intent;
 
 import com.google.android.material.materialswitch.MaterialSwitch;
 
@@ -66,25 +67,25 @@ public class MainActivity extends AppCompatActivity {
             }
 
             // 1.2 y 1.3: comprobación del usuario
+            // Comprobación del usuario
             if (correo.equals(CORREO_VALIDO) && pass.equals(PASS_VALIDA)) {
-                intentosFallidos = 0;   // Extra: si aciertas, vuelve a 0
-                // Datos correctos: mensaje en verde
-                tvMensaje.setTextColor(getColor(R.color.verde_ok));
-                if (swRecordar.isChecked()) {
-                    tvMensaje.setText(R.string.msg_correcto_recordar);
-                } else {
-                    tvMensaje.setText(R.string.msg_correcto);
-                }
+                intentosFallidos = 0;
+
+                // Datos correctos: se abre el menú y se le pasa el correo
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                intent.putExtra(MenuActivity.EXTRA_CORREO, correo);
+                startActivity(intent);
+                finish(); // cierra el login: al pulsar Atrás en el menú se sale de la app
             } else {
                 intentosFallidos++;   // Extra: cada fallo suma uno
                 tvMensaje.setTextColor(getColor(R.color.rojo_error));
                 if (intentosFallidos >= 3) {
                     // Al tercer fallo: botón desactivado, mensaje y Toast
                     btnContinuar.setEnabled(false);
-                    tvMensaje.setText(R.string.msg_demasiados);
-                    Toast.makeText(this, R.string.msg_demasiados, Toast.LENGTH_SHORT).show();
+                    tvMensaje.setText("Demasiados intentos");
+                    Toast.makeText(this, "Demasiados intentos", Toast.LENGTH_SHORT).show();
                 } else {
-                    tvMensaje.setText(R.string.msg_incorrecto);
+                    tvMensaje.setText("Usuario y/o contraseña incorrectos");
                 }
             }
         });
