@@ -134,6 +134,13 @@ public class MainActivity extends AppCompatActivity {
                 .setAudioAttributes(atributos)
                 .build();
 
+        // Definir los colores verde (#4CAF50) y blanco (#FFFFFF)
+        int colorVerde = android.graphics.Color.parseColor("#4CAF50");
+        int colorBlanco = android.graphics.Color.WHITE;
+        int colorTextoBlanco = android.graphics.Color.WHITE;
+        int colorTextoNegro = android.graphics.Color.BLACK;
+
+        // Cuando los 4 audios se hayan cargado, activamos los botones
         soundPool.setOnLoadCompleteListener((sp, sampleId, status) -> {
             if (status == 0) {
                 sonidosCargados++;
@@ -146,15 +153,59 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Cargar los 4 sonidos de res/raw
         idEfecto1 = soundPool.load(this, R.raw.sonido1, 1);
         idEfecto2 = soundPool.load(this, R.raw.sonido2, 1);
         idEfecto3 = soundPool.load(this, R.raw.sonido3, 1);
         idEfecto4 = soundPool.load(this, R.raw.sonido4, 1);
 
-        btnEfecto1.setOnClickListener(v -> soundPool.play(idEfecto1, 1f, 1f, 1, 0, 1f));
-        btnEfecto2.setOnClickListener(v -> soundPool.play(idEfecto2, 1f, 1f, 1, 0, 1f));
-        btnEfecto3.setOnClickListener(v -> soundPool.play(idEfecto3, 1f, 1f, 1, 0, 1f));
-        btnEfecto4.setOnClickListener(v -> soundPool.play(idEfecto4, 1f, 1f, 1, 0, 1f));
+        // Botón 1
+        btnEfecto1.setOnClickListener(v -> {
+            btnEfecto1.setBackgroundTintList(android.content.res.ColorStateList.valueOf(colorBlanco));
+            btnEfecto1.setTextColor(colorTextoNegro);
+            soundPool.play(idEfecto1, 1f, 1f, 1, 0, 1f);
+
+            new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                btnEfecto1.setBackgroundTintList(android.content.res.ColorStateList.valueOf(colorVerde));
+                btnEfecto1.setTextColor(colorTextoBlanco);
+            }, 1000);
+        });
+
+        // Botón 2
+        btnEfecto2.setOnClickListener(v -> {
+            btnEfecto2.setBackgroundTintList(android.content.res.ColorStateList.valueOf(colorBlanco));
+            btnEfecto2.setTextColor(colorTextoNegro);
+            soundPool.play(idEfecto2, 1f, 1f, 1, 0, 1f);
+
+            new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                btnEfecto2.setBackgroundTintList(android.content.res.ColorStateList.valueOf(colorVerde));
+                btnEfecto2.setTextColor(colorTextoBlanco);
+            }, 1000);
+        });
+
+        // Botón 3
+        btnEfecto3.setOnClickListener(v -> {
+            btnEfecto3.setBackgroundTintList(android.content.res.ColorStateList.valueOf(colorBlanco));
+            btnEfecto3.setTextColor(colorTextoNegro);
+            soundPool.play(idEfecto3, 1f, 1f, 1, 0, 1f);
+
+            new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                btnEfecto3.setBackgroundTintList(android.content.res.ColorStateList.valueOf(colorVerde));
+                btnEfecto3.setTextColor(colorTextoBlanco);
+            }, 1000);
+        });
+
+        // Botón 4
+        btnEfecto4.setOnClickListener(v -> {
+            btnEfecto4.setBackgroundTintList(android.content.res.ColorStateList.valueOf(colorBlanco));
+            btnEfecto4.setTextColor(colorTextoNegro);
+            soundPool.play(idEfecto4, 1f, 1f, 1, 0, 1f);
+
+            new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                btnEfecto4.setBackgroundTintList(android.content.res.ColorStateList.valueOf(colorVerde));
+                btnEfecto4.setTextColor(colorTextoBlanco);
+            }, 1000);
+        });
     }
 
     @Override
