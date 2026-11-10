@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">ReproductorManuelMas</string>
-</resources>
+        <string name="app_name">Reproductor de Manuel Mas</string>
+        <string name="titulo_cancion">Brigantes · Manuel Mas</string>
+        <string name="tiempo_inicial">00:00</string>
+        <string name="btn_play">Play</string>
+        <string name="btn_pausa">Pausa</string>
+        <string name="titulo_efectos">Efectos de sonido</string>
+        <string name="btn_efecto1">sonido1</string>
+        <string name="btn_efecto2">sonido2</string>
+        <string name="btn_efecto3">sonido3</string>
+        <string name="btn_efecto4">sonido4</string>
+    </resources>
