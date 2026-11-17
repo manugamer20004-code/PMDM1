@@ -5,6 +5,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.bumptech.glide.Glide;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.content.res.AppCompatResources;
@@ -61,7 +62,9 @@ public class AdaptadorClaseVideojuegos
         Videojuegos videojuego = videojuegos.get(position);
         holder.tvTitulo.setText(videojuego.getTitulo());
         holder.tvSubtitulo.setText(videojuego.getPlataforma());
-        holder.ivImagen.setImageResource(videojuego.getImagen());
+        Glide.with(holder.itemView)
+                .load(videojuego.getImagen())
+                .into(holder.ivImagen);
 
         // Al tocar la fila, un Toast con su título
         holder.itemView.setOnClickListener(v ->

@@ -3,48 +3,48 @@
     "id": 1,
     "titulo": "Call of Duty: Mobile",
     "plataforma": "Móvil",
-    "imagen": "https://picsum.photos/id/1011/300/300"
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Call_of_Duty_Mobile_Logo.png/600px-Call_of_Duty_Mobile_Logo.png"
   },
   {
     "id": 2,
     "titulo": "Free Fire",
     "plataforma": "Móvil",
-    "imagen": "https://picsum.photos/id/1015/300/300"
+    "imagen": "https://upload.wikimedia.org/wikipedia/en/c/c5/Logo_of_Garena_Free_Fire.png"
   },
   {
     "id": 3,
     "titulo": "Grand Theft Auto V",
     "plataforma": "PlayStation 5",
-    "imagen": "https://picsum.photos/id/1016/300/300"
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Grand_Theft_Auto_logo_series.svg/600px-Grand_Theft_Auto_logo_series.svg.png"
   },
   {
     "id": 4,
     "titulo": "Minecraft",
     "plataforma": "PC",
-    "imagen": "https://picsum.photos/id/1018/300/300"
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Minecraft-creeper-face.svg/500px-Minecraft-creeper-face.svg.png"
   },
   {
     "id": 5,
     "titulo": "Mobile Legends",
     "plataforma": "Móvil",
-    "imagen": "https://picsum.photos/id/1019/300/300"
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mobile_Legends_Bang_Bang_2025_logo.png/600px-Mobile_Legends_Bang_Bang_2025_logo.png"
   },
   {
     "id": 6,
     "titulo": "PUBG: Battlegrounds",
     "plataforma": "PC",
-    "imagen": "https://picsum.photos/id/1020/300/300"
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/PUBG_Corporation_Logo.svg/600px-PUBG_Corporation_Logo.svg.png"
   },
   {
     "id": 7,
     "titulo": "Roblox",
     "plataforma": "PC",
-    "imagen": "https://picsum.photos/id/1024/300/300"
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Roblox_Logo_2022.jpg/600px-Roblox_Logo_2022.jpg"
   },
   {
     "id": 8,
     "titulo": "Valorant",
     "plataforma": "PC",
-    "imagen": "https://picsum.photos/id/1025/300/300"
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/600px-Valorant_logo_-_pink_color_version.svg.png"
   }
 ]
