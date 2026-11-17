@@ -1,50 +1,50 @@
 [
   {
     "id": 1,
-    "titulo": "Titanic",
-    "anio": "1997",
+    "titulo": "Call of Duty: Mobile",
+    "plataforma": "Móvil",
     "imagen": "https://picsum.photos/id/1011/300/300"
   },
   {
     "id": 2,
-    "titulo": "Avatar",
-    "anio": "2009",
+    "titulo": "Free Fire",
+    "plataforma": "Móvil",
     "imagen": "https://picsum.photos/id/1015/300/300"
   },
   {
     "id": 3,
-    "titulo": "Coco",
-    "anio": "2017",
+    "titulo": "Grand Theft Auto V",
+    "plataforma": "PlayStation 5",
     "imagen": "https://picsum.photos/id/1016/300/300"
   },
   {
     "id": 4,
-    "titulo": "Origen",
-    "anio": "2010",
+    "titulo": "Minecraft",
+    "plataforma": "PC",
     "imagen": "https://picsum.photos/id/1018/300/300"
   },
   {
     "id": 5,
-    "titulo": "Interstellar",
-    "anio": "2014",
+    "titulo": "Mobile Legends",
+    "plataforma": "Móvil",
     "imagen": "https://picsum.photos/id/1019/300/300"
   },
   {
     "id": 6,
-    "titulo": "Gladiator",
-    "anio": "2000",
+    "titulo": "PUBG: Battlegrounds",
+    "plataforma": "PC",
     "imagen": "https://picsum.photos/id/1020/300/300"
   },
   {
     "id": 7,
-    "titulo": "Matrix",
-    "anio": "1999",
+    "titulo": "Roblox",
+    "plataforma": "PC",
     "imagen": "https://picsum.photos/id/1024/300/300"
   },
   {
     "id": 8,
-    "titulo": "Dune",
-    "anio": "2021",
+    "titulo": "Valorant",
+    "plataforma": "PC",
     "imagen": "https://picsum.photos/id/1025/300/300"
   }
 ]
