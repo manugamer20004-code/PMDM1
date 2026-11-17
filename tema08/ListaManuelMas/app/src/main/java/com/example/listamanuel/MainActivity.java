@@ -1,6 +1,8 @@
 package com.example.listamanuel;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +13,14 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,16 +36,22 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // 1. Los datos: al menos 8 elementos
+        // 1. Los datos: se leen desde res/raw/datos.json
         ArrayList<Videojuegos> videojuegos = new ArrayList<>();
-        videojuegos.add(new Videojuegos("Call of Duty: Mobile", "Móvil", R.drawable.call_of_duty_logo));
-        videojuegos.add(new Videojuegos("Free Fire", "Móvil", R.drawable.free_fire_logo));
-        videojuegos.add(new Videojuegos("Grand Theft Auto V", "PlayStation 5", R.drawable.gta__grand_theft_auto__logo));
-        videojuegos.add(new Videojuegos("Minecraft", "PC", R.drawable.minecraft_logo));
-        videojuegos.add(new Videojuegos("Mobile Legends", "Móvil", R.drawable.mobile_legends_logo));
-        videojuegos.add(new Videojuegos("PUBG: Battlegrounds", "PC", R.drawable.pubg_battlegrounds_logo));
-        videojuegos.add(new Videojuegos("Roblox", "PC", R.drawable.roblox_icon));
-        videojuegos.add(new Videojuegos("Valorant", "PC", R.drawable.valorant_logo));
+        try {
+            JSONArray array = new JSONArray(leerRaw(R.raw.datos));
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject objeto = array.getJSONObject(i);
+                String titulo = objeto.getString("titulo");
+                String plataforma = objeto.getString("plataforma");
+                String imagen = objeto.getString("imagen");
+
+                videojuegos.add(new Videojuegos(titulo, plataforma, imagen));
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, "Error al leer el JSON", Toast.LENGTH_LONG).show();
+            Log.e("MainActivity", "Error al leer datos.json", e);
+        }
 
         // 2. La lista: cómo se colocan las filas y quién las pinta
         RecyclerView rvLista = findViewById(R.id.rvLista);
@@ -43,5 +59,18 @@ public class MainActivity extends AppCompatActivity {
         rvLista.addItemDecoration(
                 new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         rvLista.setAdapter(new AdaptadorClaseVideojuegos(videojuegos));
+    }
+
+    private String leerRaw(int idRecurso) throws IOException {
+        try (InputStream entrada = getResources().openRawResource(idRecurso);
+             BufferedReader lector = new BufferedReader(
+                     new InputStreamReader(entrada, StandardCharsets.UTF_8))) {
+            StringBuilder texto = new StringBuilder();
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                texto.append(linea).append('\n');
+            }
+            return texto.toString();
+        }
     }
 }
