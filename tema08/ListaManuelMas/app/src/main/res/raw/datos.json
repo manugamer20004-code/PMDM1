@@ -3,7 +3,7 @@
     "id": 1,
     "titulo": "Call of Duty: Mobile",
     "plataforma": "Móvil",
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Call_of_Duty_Mobile_Logo.png/600px-Call_of_Duty_Mobile_Logo.png"
+    "imagen": "hhttps://upload.wikimedia.org/wikipedia/commons/3/37/Call_of_Duty_Mobile_2023_logo.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
     "id": 2,
@@ -15,36 +15,36 @@
     "id": 3,
     "titulo": "Grand Theft Auto V",
     "plataforma": "PlayStation 5",
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Grand_Theft_Auto_logo_series.svg/600px-Grand_Theft_Auto_logo_series.svg.png"
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpDu26g5Va19L-fmlWrB-W_oB9UVGMIjF2ESfJLl_F7Xg6ZqEcJ0esXwg&s=10"
   },
   {
     "id": 4,
     "titulo": "Minecraft",
     "plataforma": "PC",
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Minecraft-creeper-face.svg/500px-Minecraft-creeper-face.svg.png"
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUhPegzs1F9yXFKrwmECfNJrypdDCIyE7xw1Jv4Uusg&s=10"
   },
   {
     "id": 5,
     "titulo": "Mobile Legends",
     "plataforma": "Móvil",
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mobile_Legends_Bang_Bang_2025_logo.png/600px-Mobile_Legends_Bang_Bang_2025_logo.png"
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToannxbTrPbAZsoXWdQR2Dq5T68ExnCh_CtoP-Cvv2PQ&s"
   },
   {
     "id": 6,
     "titulo": "PUBG: Battlegrounds",
     "plataforma": "PC",
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/PUBG_Corporation_Logo.svg/600px-PUBG_Corporation_Logo.svg.png"
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDRJvtCgq6p4shtiN5745pW_SlkpIp39mwkwTkikN4pg0KD8WDomMFrGlq&s=10"
   },
   {
     "id": 7,
     "titulo": "Roblox",
     "plataforma": "PC",
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Roblox_Logo_2022.jpg/600px-Roblox_Logo_2022.jpg"
+    "imagen": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/250px-Roblox_%282025%29_%28App_Icon%29.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
     "id": 8,
     "titulo": "Valorant",
     "plataforma": "PC",
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/600px-Valorant_logo_-_pink_color_version.svg.png"
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8qLNClC4nl43RXtcpB3nJRzSkPVJCo5N5NTCdHP9KoQ&s=10"
   }
 ]
